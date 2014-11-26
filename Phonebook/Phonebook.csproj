@@ -163,12 +163,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhonebookFromDatabaseController.cs" />
     <Compile Include="Controllers\PhonebookController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\PhonebookEntriesEntities.cs" />
     <Compile Include="Models\PhonebookModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -301,6 +303,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Phonebook\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PhonebookFromDatabase\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PhonebookFromDatabase\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PhonebookFromDatabase\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PhonebookFromDatabase\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PhonebookFromDatabase\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

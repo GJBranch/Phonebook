@@ -71,7 +71,13 @@ namespace Phonebook.Controllers
         {
             try
             {
-                _Phonebook.Where(entry => entry.PhoneNumber == phoneNum).ToList().ForEach(result => { result = model; });
+                _Phonebook.Where(entry => entry.PhoneNumber == phoneNum).ToList().ForEach(result =>
+                                                                                              {
+                                                                                                  result.FirstName = model.FirstName;
+                                                                                                  result.LastName = model.LastName;
+                                                                                                  result.Email = model.Email;
+                                                                                                  result.PhoneNumber = model.PhoneNumber;
+                                                                                              });
 
                 return RedirectToAction("Index");
             }
