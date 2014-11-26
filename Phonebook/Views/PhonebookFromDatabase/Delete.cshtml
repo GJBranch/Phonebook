@@ -4,43 +4,15 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Delete Entry</h2>
+<div>
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-link" })
+</div>
 
-<h3>Are you sure you want to delete this?</h3>
-<fieldset>
-    <legend>PhonebookFromDatabaseModel</legend>
+<h3 class="confirmation">Are you sure you want to delete @Model.FirstName @Model.LastName?</h3>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.FirstName)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.FirstName)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.LastName)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.LastName)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.PhoneNumber)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.PhoneNumber)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Email)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email)
-    </div>
-</fieldset>
 @using (Html.BeginForm()) {
-    <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+    <div>
+        <button class="btn btn-default" type="submit">Delete</button>
+    </div>
 }
